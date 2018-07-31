@@ -1,0 +1,12 @@
+.risk-delete-dialog {
+    width: 600px;
+}
+
+.risk-delete-dialog .label {
+    font-weight: bold;
+}
+.risk-delete-dialog .value {
+    font-style: italic;
+    display: block;
+    padding-left: 15px;
+}

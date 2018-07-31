@@ -1,0 +1,46 @@
+<form class="risk-view">
+  <h1>Risk Assessment</h1>
+
+  <h2>Definition</h2>
+  <div class="definition">
+    <mat-form-field class="text">
+      <textarea 
+        matInput 
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="3"
+        placeholder="Asset" readonly value="{{ assessment.asset }}"></textarea>
+    </mat-form-field>
+    <mat-form-field class="text">
+      <textarea
+        matInput 
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="3"
+        placeholder="Threat" readonly value="{{ assessment.threat }}"></textarea>
+    </mat-form-field>
+    <mat-form-field class="risk-type">
+      <mat-select [value]="assessment.form.riskType" (selectionChange)="updateRiskType($event.value)" placeholder="Risk Type">
+        <mat-option *ngFor="let form of getAllForms()" [value]="form.riskType">{{ form.riskType }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h2>Assessment Questions</h2>
+  <mat-selection-list (selectionChange)="assessments.updateAnswer(assessment, $event.option.value, $event.option.selected)">
+    <mat-list-option *ngFor="let question of assessment.form.questions; let i = index" [value]="i" [selected]="assessment.answers[i]">
+      {{ question }}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <mat-divider></mat-divider>
+
+  <h2>Result</h2>
+  <mat-chip-list>
+    <mat-chip selected [style.background-color]="assessment.likelihoodColor">{{ assessment.likelihood }} likelihood</mat-chip>
+    <span class="formula">x</span>
+    <mat-chip selected [style.background-color]="assessment.impactColor">{{ assessment.impact }} impact</mat-chip>
+    <span class="formula">=</span>
+    <mat-chip selected [style.background-color]="assessment.riskColor">{{ assessment.risk }} risk</mat-chip>
+  </mat-chip-list>
+</form>

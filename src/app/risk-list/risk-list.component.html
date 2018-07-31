@@ -1,0 +1,61 @@
+<div class="risk-list">
+  <div class="controls">
+    <mat-form-field class="filter">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+    <div class="buttons">
+      <a mat-button color="primary" (click)="add()"><mat-icon>add</mat-icon><span>Add Risk</span></a>
+      <a mat-button color="primary" (click)="download()"><mat-icon>cloud_download</mat-icon><span>Download Risks</span></a>
+    </div>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z4">
+    <ng-container matColumnDef="asset">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-column">Asset</th>
+      <td mat-cell *matCellDef="let element" class="text"> {{element.asset}} </td>
+    </ng-container>
+    <ng-container matColumnDef="threat">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-column">Threat</th>
+      <td mat-cell *matCellDef="let element" class="text"> {{element.threat}} </td>
+    </ng-container>
+    <ng-container matColumnDef="riskType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="risk-type-column">Risk Type</th>
+      <td mat-cell *matCellDef="let element" class="text"> {{element.form.riskType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="likelihood">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="severity-column">Likelihood</th>
+      <td mat-cell *matCellDef="let element" class="chip">
+        <mat-chip-list>
+          <mat-chip selected [style.background-color]="element.likelihoodColor">{{ element.likelihood }}</mat-chip>
+        </mat-chip-list>                  
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="impact">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="severity-column">Impact</th>
+      <td mat-cell *matCellDef="let element" class="chip">
+        <mat-chip-list>
+          <mat-chip selected [style.background-color]="element.impactColor">{{ element.impact }}</mat-chip>
+        </mat-chip-list>        
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="risk">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="severity-column">Risk</th>
+      <td mat-cell *matCellDef="let element" class="chip">
+        <mat-chip-list>
+          <mat-chip selected [style.background-color]="element.riskColor">{{ element.risk }}</mat-chip>
+        </mat-chip-list>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <th mat-header-cell *matHeaderCellDef class="delete-column">Delete</th>
+      <td mat-cell *matCellDef="let element" class="button">
+        <a mat-mini-fab color="primary" (click)="delete(element); $event.stopPropagation();" class="button-edit mat-elevation-z3"><mat-icon>delete_forever</mat-icon></a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table-header"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="assessment-row" (click)="navigate(row)"></tr>
+  </table>
+</div>

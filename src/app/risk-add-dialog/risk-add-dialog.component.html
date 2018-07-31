@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Add Risk</h2>
+<mat-dialog-content>
+  <form #entryForm="ngForm" class="risk-add-dialog">
+    <mat-form-field>
+      <textarea
+        matInput 
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="3"
+        cdkAutosizeMaxRows="6"
+        placeholder="Asset"
+        name="asset"
+        [(ngModel)]="asset"
+        required></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="3"
+        cdkAutosizeMaxRows="6"
+        placeholder="Threat"
+        name="threat" 
+        [(ngModel)]="threat" 
+        required></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="ok()">OK</button>
+</mat-dialog-actions>

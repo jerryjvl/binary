@@ -1,0 +1,46 @@
+.risk-view {
+    padding: 0 30px;
+}
+.risk-view h2 {
+    margin-bottom: 12px;
+}
+.risk-view mat-divider {
+    margin: 4px 0;
+}
+
+.risk-view .definition {
+    display: flex;
+    flex-direction: row;
+}
+.risk-view mat-form-field {
+    padding: 0 12px;
+    vertical-align: top;
+}
+.risk-view mat-form-field.text {
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+.risk-view mat-form-field.risk-type {
+    flex-basis: 180px;
+    flex-grow: 0;
+}
+.risk-view mat-chip {
+    margin: 0 20px;
+    font-size: 150%;
+}
+
+.risk-view textarea {
+    resize: none;
+}
+
+.risk-view mat-selection-list {
+    padding-top: 0;
+}
+
+.risk-view mat-list-option {
+    height: 30px;
+}
+
+.risk-view .formula {
+    font-size: 200%;
+}

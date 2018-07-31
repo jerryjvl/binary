@@ -1,0 +1,59 @@
+.risk-list {
+    padding: 0 30px;
+}
+
+.risk-list .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.risk-list .controls .filter {
+    flex-basis: 33%;
+    flex-grow: 0;
+}
+.risk-list .controls .buttons {
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: flex-end;
+    height: 38px;
+}
+.risk-list .controls .buttons a span {
+    margin-left: 8px;
+}
+
+.risk-list table {
+    width: 100%;
+}
+.risk-list table mat-chip {
+    width: 76px;
+}
+.risk-list table .assessment-row:hover {
+    background: #f5f5f5;
+}
+.risk-list table {
+    table-layout: fixed;
+}
+.risk-list table td.text {
+    vertical-align: top;
+    padding-top: 12px;
+    padding-bottom: 6px;
+    padding-right: 12px;
+}
+.risk-list table td.chip {
+    vertical-align: top;
+    padding-top: 7px;
+}
+.risk-list table td.button {
+    vertical-align: top;
+    padding-top: 3px;
+}
+.risk-list table .risk-type-column {
+    width: 160px;
+}
+.risk-list table .severity-column {
+    width: 88px;
+}
+.risk-list table .delete-column {
+    width: 48px;
+}

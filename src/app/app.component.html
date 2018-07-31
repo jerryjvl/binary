@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="toolbar">
+  <mat-toolbar-row>
+    <span>Binary Risk Assessment</span>
+    <span class="toolbar-spacer"></span>
+    <nav>
+      <a mat-stroked-button [matBadge]="assessments.count" matBadgeColor="accent" routerLink="/risks"><mat-icon>list</mat-icon> Risk List</a>
+    </nav>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="spacer"></div>
+<router-outlet></router-outlet>
