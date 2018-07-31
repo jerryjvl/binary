@@ -1,27 +1,31 @@
-# BinaryRiskAssessment
+# binary
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Binary Risk Assessment - Angular version, based on https://github.com/protect-io/binary.
 
-## Development server
+This application is a re-imagined version of the BRA tool using local storage for a persistent local risk list that can be reviewed, edited, and exported.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Individual risk assessment URLs can be shared with others. If they open the link the risk and its assessment will automatically add/update their own local storage.
 
-## Code scaffolding
+In essence the risk URLs can be used as a distributed risk assessment tool.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+My use-case is to put the assessment URLs inside JIRA tickets to capture the assessment that led to a specific risk level on the ticket.
 
-## Build
+# Making your own risk types
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This tool has a number of common built-in risk types with slight tweaks and adjustments to the language of the questions to better fit the context of the risk type.
 
-## Running unit tests
+It is very easy to create your own additional risk types or adjust the questions by editing `/src/app/data-model/forms.data.ts` to your own requirements.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Using this in your own company
 
-## Running end-to-end tests
+I recommend you fork this repository and create your own published version of this tool so that you are in full control of the links it produces.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Steps:
+1. Fork this repository
+2. Clone the repository, and `npm install` the dependencies
+3. Install angular-cli-ghpages with `npm i -g angular-cli-ghpages`
+4. `ng build --prod --base-href "https://<your-username>.github.io/binary/"`
+5. `npm run build:appcache`
+6. `ngh --dir app`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If all goes well, this should leave you with your own personal risk assessment tool at `https://<your-username>.github.io/binary/`.
