@@ -68,8 +68,11 @@ export class RiskListComponent implements OnInit {
       .afterClosed()
       .subscribe(result => {
         if (result) {
-          this.assessments.createOrUpdateFromString(result.asset, result.threat, undefined, 'ffffffffff');
+          var newAssessment = this.assessments.createOrUpdateFromString(result.asset, result.threat, undefined, 'ffffffffff');
           this.dataSource = new MatTableDataSource(this.assessments.assessments);
+
+          // Navigate to the newly created risk
+          this.router.navigateByUrl(this.assessments.getPath(newAssessment));
         }
       });
   }

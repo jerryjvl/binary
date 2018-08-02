@@ -123,9 +123,9 @@ export class AssessmentsService {
   //
 
   public getPath(assessment: Assessment): string {
-    var path = `/risk/${assessment.asset}/${assessment.threat}`;
+    var path = `/risk/${encodeURIComponent(assessment.asset)}/${encodeURIComponent(assessment.threat)}`;
     if (assessment.form.riskType) {
-      path = path + `/${assessment.form.riskType}/`;
+      path = path + `/${encodeURIComponent(assessment.form.riskType)}/`;
     } else {
       path = path + '/undefined/';
     }
