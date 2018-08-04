@@ -1,3 +1,9 @@
+@media (min-width: 960px) {
+  .risk-list table .compact-row {
+      display: none;
+  }
+}
+
 .risk-list {
     padding: 0 30px;
 }
@@ -28,7 +34,8 @@
 .risk-list table mat-chip {
     width: 76px;
 }
-.risk-list table .assessment-row:hover {
+.risk-list table .assessment-row:hover,
+.risk-list table .compact-row:hover {
     background: #f5f5f5;
 }
 .risk-list table {
@@ -56,4 +63,48 @@
 }
 .risk-list table .delete-column {
     width: 48px;
+}
+
+@media (max-width: 960px) {
+    .risk-list table {
+        table-layout: auto;
+    }
+
+    .risk-list table .assessment-row td {
+        border-bottom: 0;
+    }
+    .risk-list table .compact-row td {
+        border-top: 0;
+    }
+    .risk-list table .compact-row mat-chip-list {
+        float: right;
+    }
+ 
+    .risk-list table td.text {
+        width: 40%;
+    }
+    .risk-list table .risk-type-column {
+        width: 20%;
+    }
+    .risk-list table .chip,
+    .risk-list table .button,
+    .risk-list table .severity-column,
+    .risk-list table .delete-column {
+        display: none;
+        width: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .risk-list .controls {
+        flex-direction: column;
+    }
+    .risk-list .controls .buttons {
+        align-self: flex-end;
+    }
+
+    .risk-list table mat-chip {
+        font-size: 75%;
+        width: 64px;
+    }
 }

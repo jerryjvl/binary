@@ -16,3 +16,7 @@
 .spacer {
     height: 16px;
 }
+
+body {
+    min-width: 400px;
+}

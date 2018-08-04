@@ -3,3 +3,15 @@
     flex-direction: column;
     width: 600px;
 }
+
+@media (max-width: 800px) {
+    .risk-add-dialog {
+        width: 480px;
+    }
+}
+
+@media (max-width: 600px) {
+    .risk-add-dialog {
+        width: 100%;
+    }
+}

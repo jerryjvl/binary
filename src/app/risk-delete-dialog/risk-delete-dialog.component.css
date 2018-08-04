@@ -10,3 +10,15 @@
     display: block;
     padding-left: 15px;
 }
+
+@media (max-width: 800px) {
+    .risk-delete-dialog {
+        width: 480px;
+    }
+}
+
+@media (max-width: 600px) {
+    .risk-delete-dialog {
+        width: 100%;
+    }
+}

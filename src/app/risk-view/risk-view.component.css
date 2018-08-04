@@ -44,3 +44,39 @@
 .risk-view .formula {
     font-size: 200%;
 }
+
+@media (max-width: 800px) {
+    .risk-view .definition {
+        flex-direction: column;
+    }
+    .risk-view mat-form-field.text {
+        flex-basis: 0;
+    }
+    .risk-view mat-form-field.risk-type {
+        flex-basis: 0;
+    }
+    .risk-view mat-list-option {
+        font-size: 90%;
+    }
+    .risk-view mat-chip {
+        margin: 0 10px;
+        font-size: 100%;
+    }
+    .risk-view .formula {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .risk-view mat-list-option {
+        line-height: 100%;
+        font-size: 80%;
+    }
+    .risk-view mat-chip {
+        margin: 0 5px;
+        font-size: 75%;
+    }
+    .risk-view .formula {
+        font-size: 75%;
+    }
+}
