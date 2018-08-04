@@ -46,6 +46,9 @@
 }
 
 @media (max-width: 800px) {
+    .risk-view {
+        padding: 0;
+    }
     .risk-view .definition {
         flex-direction: column;
     }

@@ -95,6 +95,18 @@
     }
 }
 
+@media (max-width: 800px) {
+    .risk-list {
+        padding: 0;
+    }
+    td.mat-cell:first-child {
+        padding-left: 8px;
+    }
+    td.mat-cell:last-child {
+        padding-right: 12px;
+    }
+}
+
 @media (max-width: 600px) {
     .risk-list .controls {
         flex-direction: column;
