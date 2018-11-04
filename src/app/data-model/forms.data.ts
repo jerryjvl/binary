@@ -3,7 +3,7 @@ import { Form } from './form';
 // See README.md for some notes on the rationale of the permutations of questions used.
 export const FORMS: Form[] = [
     { riskType: undefined, questions: [
-        'The threat requries significant skills, knowledge, or expertise to avert', // TWEAK "or"s
+        'The threat requires significant skills, knowledge, or expertise to avert', // TWEAK "or"s
         'The threat requires significant resources to avert',
         'Not all ways the threat can manifest and impact the asset have been mitigated',
         'Existing mitigations against the threat have known limitations or gaps', // TWEAK "or"s
@@ -15,7 +15,7 @@ export const FORMS: Form[] = [
         'Restoring, replacing, or repairing the asset involves significant cost to the company' // TWEAK "or"s
     ]},
     { riskType: 'Financial', questions: [
-        'The threat requries significant knowledge, or expertise to avert',
+        'The threat requires significant knowledge, or expertise to avert',
         'The threat requires significant resources to avert',
         'Not all ways the threat can manifest and impact the asset have been mitigated',
         'Existing mitigations against the threat have known limitations or gaps',
@@ -27,7 +27,7 @@ export const FORMS: Form[] = [
         'Restoring, or replacing the asset involves significant cost to the company'
     ]},
     { riskType: 'Legal & Compliance', questions: [
-        'The threat requries significant skills, knowledge, or expertise to avert',
+        'The threat requires significant skills, knowledge, or expertise to avert',
         'The threat requires significant resources to avert',
         'Not all ways the threat can manifest and impact the asset have been mitigated',
         'Existing mitigations against the threat have known limitations or gaps',
@@ -39,7 +39,7 @@ export const FORMS: Form[] = [
         'Restoring, or repairing the asset involves significant cost to the company'
     ]},
     { riskType: 'Operational', questions: [
-        'The threat requries significant skills, knowledge, or expertise to avert',
+        'The threat requires significant skills, knowledge, or expertise to avert',
         'The threat requires significant resources to avert',
         'Not all ways the threat can manifest and impact the asset have been mitigated',
         'Existing mitigations against the threat have known limitations or gaps',
@@ -63,7 +63,7 @@ export const FORMS: Form[] = [
         'Restoring, or repairing the asset involves significant cost to the company'
     ]},
     { riskType: 'Project', questions: [
-        'The threat requries significant skills, knowledge, or expertise to avert',
+        'The threat requires significant skills, knowledge, or expertise to avert',
         'The threat requires significant resources to avert',
         'Not all ways the threat can manifest and impact the asset have been mitigated',
         'Existing mitigations against the threat have known limitations or gaps',
@@ -75,7 +75,7 @@ export const FORMS: Form[] = [
         'Restoring, replacing, or repairing the asset involves significant cost to the company'
     ]},
     { riskType: 'Reputational', questions: [
-        'The threat requries significant skills, or expertise to avert',
+        'The threat requires significant skills, or expertise to avert',
         'The threat requires significant resources to avert',
         'Not all ways the threat can manifest and impact the asset have been mitigated',
         'Existing protection of the asset has known limitations or gaps',
@@ -99,7 +99,7 @@ export const FORMS: Form[] = [
         'Restoring, or repairing the asset involves significant cost to the company'
     ]},
     { riskType: 'Strategic & Competitive', questions: [
-        'The threat requries significant skills, knowledge, or expertise to avert',
+        'The threat requires significant skills, knowledge, or expertise to avert',
         'The threat requires significant resources to avert',
         'Not all ways the threat can manifest and impact the asset have been mitigated',
         'Existing mitigations against the threat have known limitations or gaps',
